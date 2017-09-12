@@ -1,6 +1,6 @@
 ; Based on original script by just.dont.do.it and Lewd Pink (http://steamcommunity.com/sharedfiles/filedetails/?id=886396996)
 
-disabled := 0
+disabled := 0 ; script on/off, toggle with f1
 
 keypressDelay := 50 ; delay between keydown/keyup
 doubletapDelay := 50 ; delay between keypresses when doubletapping
@@ -223,7 +223,7 @@ Return
   Send {Right up}
 Return
 
-
+; toggle script on/off for using steam overlay
 f1::
 Suspend,Toggle
 
