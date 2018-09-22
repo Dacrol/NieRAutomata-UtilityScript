@@ -215,13 +215,13 @@ Return
 ; flashlight
 ; *5::t
 
-*r::
-  Send {Q down}
-  Send {Right down}
-  Sleep keypressDelay
-  Send {Q up}
-  Send {Right up}
-Return
+; *r::
+;   Send {Q down}
+;   Send {Right down}
+;   Sleep keypressDelay
+;   Send {Q up}
+;   Send {Right up}
+; Return
 
 ; toggle script on/off for using steam overlay
 f1::
