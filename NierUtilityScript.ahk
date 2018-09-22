@@ -213,7 +213,7 @@ Return
 Return
 
 ; flashlight
-*5::t
+; *5::t
 
 *r::
   Send {Q down}
