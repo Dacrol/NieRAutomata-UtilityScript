@@ -35,6 +35,8 @@ dodgeButton := "LShift"
 airSlideButton := "f"
 ; use last item
 useLastItemButton := "v"
+; Cycle target
+cycleButton := "r"
 
 #UseHook
 SendMode Input
@@ -122,6 +124,14 @@ airSlide() {
   }
 }
 
+cycleTarget() {
+  Send {Q down}
+  Send {Right down}
+  Sleep keypressDelay
+  Send {Q up}
+  Send {Right up}
+}
+
 useLastItem() {
   Send {%altButton% down}
   Send {%useItems% down}
@@ -146,6 +156,9 @@ Hotkey $*%airSlideButton%, airSlide
 
 ; use last item
 Hotkey $*%useLastItemButton%, useLastItem
+
+; Cycle target locks
+Hotkey $*%cycleButton%, cycleTarget
 
 ; include script for showing pod while using pod toggle
 ; uses GDI+ library by tic: https://github.com/tariqporter/Gdip
