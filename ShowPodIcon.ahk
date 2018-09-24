@@ -31,7 +31,7 @@ Gui, 1: Show, NA
 hwnd1 := WinExist()
 
 ; Get a bitmap from the image
-pBitmap := Gdip_CreateBitmapFromFile("img\podicon.png")
+pBitmap := Gdip_CreateBitmapFromFile("img\podfire.png")
 
 ; Check to ensure we actually got a bitmap from the file, in case the file was corrupt or some other error occured
 If !pBitmap
@@ -47,7 +47,7 @@ Width := Gdip_GetImageWidth(pBitmap), Height := Gdip_GetImageHeight(pBitmap)
 ; Create a gdi bitmap with width and height of what we are going to draw into it. This is the entire drawing area for everything
 ; We are creating this "canvas" at half the size of the actual image
 ; We are halving it because we want the image to show in a gui on the screen at half its dimensions
-hbm := CreateDIBSection(Width//2, Height//2)
+hbm := CreateDIBSection(Width//1.5, Height//1.5)
 
 ; Get a device context compatible with the screen
 hdc := CreateCompatibleDC()
@@ -69,11 +69,11 @@ Gdip_SetInterpolationMode(G, 7)
 ; The source height and width are specified, and also the destination width and height (half the original)
 ; Gdip_DrawImage(pGraphics, pBitmap, dx, dy, dw, dh, sx, sy, sw, sh, Matrix)
 ; d is for destination and s is for source. We will not talk about the matrix yet (this is for changing colours when drawing)
-Gdip_DrawImage(G, pBitmap, 0, 0, Width//2, Height//2, 0, 0, Width, Height)
+Gdip_DrawImage(G, pBitmap, 0, 0, Width//1.5, Height//1.5, 0, 0, Width, Height)
 
 ; Update the specified window we have created (hwnd1) with a handle to our bitmap (hdc), specifying the x,y,w,h we want it positioned on our screen
 ; So this will position our gui at (0,0) with the Width and Height specified earlier (half of the original image)
-UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width//2, Height//2)
+UpdateLayeredWindow(hwnd1, hdc, 0, 0, Width//1.5, Height//1.5)
 
 
 ; Select the object back into the hdc
