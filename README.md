@@ -11,7 +11,7 @@ Utility script for adding additional keybinds and functions to NieR: Automata. A
 - Switch pods with 2 and 3
 - Cycle locked target with R
 
-Run with NierUtilityScript.ahk. Either change the keys in the script file or make sure keys are bound to the same as in the script:
+Run NierUtilityScript.ahk with AutoHotkey (v1.1.*). Either change the keys in the script file or make sure keys are bound to the same as in the script:
 
 - Pod fire to Tab
 - Pod program to Ctrl
