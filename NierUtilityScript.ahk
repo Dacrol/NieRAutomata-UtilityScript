@@ -198,17 +198,8 @@ Return
   Send {Up up}
 Return
 
-; change weapons
-*2::
-  Send {LAlt down}
-  Send {Up down}
-  Sleep keypressDelay
-  Send {LAlt up}
-  Send {Up up}
-Return
-
 ; change pod
-*4::
+*2::
   Send {LAlt down}
   Send {Right down}
   Sleep keypressDelay
