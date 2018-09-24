@@ -173,7 +173,7 @@ $*x::
   ctrlToggle := GetKeyState("Ctrl") ; this variable is used in other places to track state
 
   if (ctrlToggle or fireToggle){
-    Gui, 1: Show, NA Y40 x960
+    Gui, 1: Show, NA y40 x960
   } else {
     Gui, 1: Hide
   }
@@ -215,6 +215,8 @@ Return
   Send {LAlt up}
   Send {Left up}
 Return
+
+*m::Escape
 
 ; flashlight
 ; *5::t
